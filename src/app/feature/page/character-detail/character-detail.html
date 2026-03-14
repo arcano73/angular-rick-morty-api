@@ -1,0 +1,23 @@
+<div class="detail-container">
+
+  <button routerLink="/" class="back-button">← Volver</button>
+
+  <p *ngIf="loading">Cargando personaje...</p>
+  <p *ngIf="error">{{ error }}</p>
+
+  <div class="detail-card" *ngIf="!loading && !error && character as c">
+    <img [src]="c.image" [alt]="c.name" class="detail-image" />
+
+    <div class="detail-info">
+      <h1>{{ c.name }}</h1>
+      <p><strong>Status:</strong> {{ c.status }}</p>
+      <p><strong>Species:</strong> {{ c.species }}</p>
+      <p><strong>Gender:</strong> {{ c.gender }}</p>
+      <p><strong>Type:</strong> {{ c.type || 'No definido' }}</p>
+      <p><strong>Origin:</strong> {{ c.origin.name }}</p>
+      <p><strong>Location:</strong> {{ c.location.name }}</p>
+      <p><strong>Episodios:</strong> {{ c.episode.length }}</p>
+    </div>
+  </div>
+
+</div>
