@@ -1,59 +1,84 @@
-# RickAndMortyClean
+# Angular Rick and Morty API
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+## Descripción del proyecto
 
-## Development server
+Este proyecto consiste en una aplicación desarrollada con **Angular** que consume la **API pública de Rick and Morty** mediante el uso de **HttpClient**.  
+La aplicación obtiene información de personajes y la muestra dinámicamente en la interfaz mediante componentes y directivas de Angular.
 
-To start a local development server, run:
+El objetivo del ejercicio es aplicar conceptos fundamentales del desarrollo frontend moderno, como el consumo de APIs REST, la organización modular del código y el renderizado dinámico de datos.
 
+---
+
+## Objetivo
+
+Implementar el consumo de una API REST en Angular, organizando el proyecto mediante **componentes, servicios y modelos**, y mostrando la información obtenida de forma dinámica en la interfaz.
+
+---
+
+## Tecnologías utilizadas
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- HttpClient
+- Rick and Morty Public API
+
+---
+
+## Funcionalidades implementadas
+
+- Consumo de API REST usando **HttpClient**
+- Servicio dedicado para la gestión de datos
+- Listado de personajes
+- Visualización de:
+  - Imagen del personaje
+  - Nombre
+  - Estado
+  - Especie
+- Renderizado dinámico utilizando `*ngFor`
+- Organización del proyecto por **componentes y servicios**
+
+---
+
+## Estructura del proyecto
+
+```bash
+src/app/
+│
+├── core
+│   └── services
+│       └── character.service.ts
+│
+├── feature
+│   └── page
+│       ├── character-list
+│       └── character-detail
+│
+├── models
+│   ├── character.ts
+│   └── api.response.ts
+│
+├── app.component.ts
+├── app.config.ts
+└── app.routes.ts
+```
+
+## API utilizada
+Rick and Morty API
+
+## Ejecución del proyecto
+
+1. Clonar el repositorio
+
+2. Instalar dependencias con:
+```bash
+npm install
+```
+3. Ejecutar el proyecto con:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Autor
+Carlos Andrés Arias Henao
